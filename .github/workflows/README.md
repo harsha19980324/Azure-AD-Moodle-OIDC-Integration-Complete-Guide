@@ -10,11 +10,8 @@
 
 3. Click Register
 
-![1 1](https://github.com/user-attachments/assets/71afad9b-2b12-41dc-82ae-34cfc600e34f)
-
-
 <p align="center">
-  <img src="(https://github.com/user-attachments/assets/7fca737a-17f2-4756-beee-60b4e87ee685)"
+  <img src="https://github.com/user-attachments/assets/7fca737a-17f2-4756-beee-60b4e87ee685"
        alt="Azure App Registration"
        width="800"
        style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
