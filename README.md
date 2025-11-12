@@ -7,6 +7,13 @@
   </p>
 </p>
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6d9f8a1c-5e2f-4a1b-9c3e-1f2a3b4c5d6e"
+       alt="Integration Banner"
+       width="900"
+       style="border:2px solid #0078D4; border-radius:12px; box-shadow: 0 8px 16px rgba(0,0,0,0.15);"/>
+</p>
+
 
 
 ## Step 1: Register Moodle as an App in Azure AD
