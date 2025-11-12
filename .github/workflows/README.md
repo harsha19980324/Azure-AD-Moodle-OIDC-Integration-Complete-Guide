@@ -11,14 +11,24 @@
 3. Click Register
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7a13c18e-a2f4-416d-9d3d-824bcdebfbff" 
-       alt="Moodle OIDC Settings" 
-       width="800" 
+  <img src="https://github.com/user-attachments/assets/7a13c18e-a2f4-416d-9d3d-824bcdebfbff"
+       alt="Azure App Registration"
+       width="800"
        style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+  <br><em>Azure AD App Registration — save the <strong>Application (client) ID</strong> and <strong>Directory (tenant) ID</strong> for Moodle configuration</em>
 </p>
 
 
 > **<span style="color:red;">Note: Save the Application (client) ID and Directory (tenant) ID</span>**
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b95cf21a-0a3d-4631-9287-30a7169be602"
+       alt="Moodle OIDC Configuration"
+       width="800"
+       style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+  <br><em>Moodle OpenID Connect plugin settings — enter your Azure AD <strong>Client ID</strong>, <strong>Secret</strong>, and <strong>v2.0 endpoints</strong></em>
+</p>
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 _______________________________________________________________________________________________________________________________________________
@@ -36,11 +46,27 @@ ________________________________________________________________________________
    - `User.Read`
 
 
-Image 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/95a18b65-3cd5-4b54-aba6-d08b43818331"
+       alt="Azure AD API Permissions"
+       width="800"
+       style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+  <br><em>Add <code>openid</code>, <code>profile</code>, <code>email</code>, and <code>User.Read</code> permissions</em>
+</p>
+
 
 4. Click **Grant admin consent for Default Directory** to approve these for your tenant.
 
-Image 
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ebad01ea-bbbd-4228-8252-e6842cacf56a"
+       alt="Azure AD Client Secret"
+       width="800"
+       style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+  <br><em>Create a <strong>Client Secret</strong> — copy the <code>Value</code> immediately (it’s shown only once!)</em>
+</p>
+
 
 > **<span style="color:red;">Note: Admin consent is required for SSO to work</span>**
 
@@ -56,8 +82,28 @@ ________________________________________________________________________________
    - **Description**: `Azure AD`
    - **Expires**: `24 months`
 
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b0a16ce8-7a03-4566-9aff-f35959e84367"
+       alt="Moodle Plugin Installer"
+       width="800"
+       style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+  <br><em>Upload the <strong>OpenID Connect ZIP</strong> directly — do <strong>not extract</strong> it</em>
+</p>
+
+
 2. **Copy the `Value`** (e.g., `F9S8Q~XXXXXXXXXXXXXXXXX-WZsA~XXXXX`)  
 > **<span style="color:red;">Warning: This is shown only once. If lost, delete and recreate.</span>**
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e4dad7e3-4777-48a8-a533-dd6fda046a3a"
+       alt="Moodle OIDC Plugin Settings"
+       width="800"
+       style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+  <br><em>Moodle OpenID Connect configuration — fill in <strong>Client ID</strong>, <strong>Client Secret</strong>, and <strong>v2.0 endpoints</strong></em>
+</p>
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
