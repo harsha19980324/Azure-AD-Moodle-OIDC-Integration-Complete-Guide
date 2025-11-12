@@ -224,3 +224,18 @@ Go to: **Site administration → Plugins → Authentication → OpenID Connect �
 
 
 
+<div align="center" style="background: #f8f9fa; padding: 20px; border-radius: 12px; border: 2px solid #0078D4; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 600px; margin: 30px auto;">
+  <h3 style="color: #00BCF2; margin: 0 0 10px;">Get in Touch</h3>
+  <p style="margin: 5px 0; color: #333;">
+    <strong>Harsha Jayawardhana</strong>
+  </p>
+  <p style="margin: 10px 0;">
+    <a href="mailto:alex.rivera@example.com" style="color: #D83B01; text-decoration: none;">harshakunkuma98@gmail.com</a> • 
+    <a href="https://linkedin.com/in/alexrivera" target="_blank">LinkedIn</a> • 
+    <a href="https://github.com/alexrivera" target="_blank">GitHub</a>
+  </p>
+  <p style="margin: 5px 0; font-size: 14px; color: #555;">
+    <em>Love open-source? Let’s collaborate!</em>
+  </p>
+</div>
+
