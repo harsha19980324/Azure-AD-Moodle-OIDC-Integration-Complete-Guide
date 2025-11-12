@@ -1,18 +1,9 @@
-
 <p align="center">
-  <h1 style="
-    background: linear-gradient(90deg, #0078D4, #00BCF2, #107C10);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 42px;
-    font-weight: 900;
-    text-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    margin: 20px 0;
-  ">
+  <h1 style="color: #0078D4; font-size: 42px; font-weight: 900; text-shadow: 0 4px 8px rgba(0,0,0,0.2);">
     Azure AD + Moodle OIDC Integration
   </h1>
-  <p style="font-size: 20px; color: #555; margin-top: -10px;">
-    <strong>Complete Guide • SSO • MFA • Auto-Sync • Zero Trust</strong>
+  <p style="font-size: 19px; color: #555; margin-top: -10px;">
+    <em>Your Complete SSO Guide • MFA • Auto-Provisioning • Zero Trust</em>
   </p>
 </p>
 
