@@ -57,7 +57,6 @@ ________________________________________________________________________________
 
 4. Click **Grant admin consent for Default Directory** to approve these for your tenant.
 
-![2](https://github.com/user-attachments/assets/948e12dc-7977-4e69-9088-fee4871d6bd4)
 
 
 <p align="center">
@@ -83,8 +82,6 @@ ________________________________________________________________________________
    - **Description**: `Azure AD`
    - **Expires**: `24 months`
 
-![3](https://github.com/user-attachments/assets/48c2c7be-41a7-4c3f-8422-a7611a8b6ad9)
-
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/48c2c7be-41a7-4c3f-8422-a7611a8b6ad9"
@@ -99,13 +96,12 @@ ________________________________________________________________________________
 > **<span style="color:red;">Warning: This is shown only once. If lost, delete and recreate.</span>**
 
 
-
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e4dad7e3-4777-48a8-a533-dd6fda046a3a"
-       alt="Moodle OIDC Plugin Settings"
+  <img src="https://github.com/user-attachments/assets/ab059778-a285-4166-b75c-92bd63edd398"
+       alt="Moodle OIDC Configuration"
        width="800"
        style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-  <br><em>Moodle OpenID Connect configuration — fill in <strong>Client ID</strong>, <strong>Client Secret</strong>, and <strong>v2.0 endpoints</strong></em>
+  <br><em>Moodle OpenID Connect settings — enter your <strong>Client ID</strong>, <strong>Client Secret</strong>, and <strong>v2.0 endpoints</strong></em>
 </p>
 
 
