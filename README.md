@@ -1,5 +1,5 @@
-<p align="center">
-  <h1 style="color: #0078D4; font-size: 42px; font-weight: 900; margin: 20px 0; text-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+<p>
+  <h1 align="center" style="color: #0078D4; font-size: 42px; font-weight: 900; margin: 20px 0; text-shadow: 0 4px 8px rgba(0,0,0,0.2);">
     Azure AD + Moodle OIDC Integration
   </h1>
 </p>
