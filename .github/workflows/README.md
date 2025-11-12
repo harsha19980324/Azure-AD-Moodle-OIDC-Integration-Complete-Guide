@@ -10,8 +10,11 @@
 
 3. Click Register
 
+![1 1](https://github.com/user-attachments/assets/71afad9b-2b12-41dc-82ae-34cfc600e34f)
+
+
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7a13c18e-a2f4-416d-9d3d-824bcdebfbff"
+  <img src="(https://github.com/user-attachments/assets/7fca737a-17f2-4756-beee-60b4e87ee685)"
        alt="Azure App Registration"
        width="800"
        style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
@@ -21,8 +24,10 @@
 
 > **<span style="color:red;">Note: Save the Application (client) ID and Directory (tenant) ID</span>**
 
+
+
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b95cf21a-0a3d-4631-9287-30a7169be602"
+  <img src="(https://github.com/user-attachments/assets/840fba53-ebe3-4f95-bab3-68d2419e08a4)"
        alt="Moodle OIDC Configuration"
        width="800"
        style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
