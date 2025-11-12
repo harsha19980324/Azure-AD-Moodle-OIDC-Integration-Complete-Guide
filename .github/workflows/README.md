@@ -44,41 +44,113 @@ Image
 > **<span style="color:red;">Note: Admin consent is required for SSO to work</span>**
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+## Step 3: Create Client Secret
+
+1. Go to: **Certificates & secrets** → **+ New client secret**
+
+   - **Description**: `Azure AD`
+   - **Expires**: `24 months`
+
+2. **Copy the `Value`** (e.g., `F9S8Q~XXXXXXXXXXXXXXXXX-WZsA~XXXXX`)  
+> **<span style="color:red;">Warning: This is shown only once. If lost, delete and recreate.</span>**
 
 
-# This is a basic workflow to help you get started with Actions
+-----------------------------------------------------------------------------------------------------------------------------------------------
+## Step 4: Install OpenID Connect Plugin in Moodle
 
-name: README.md
+1. Download the ZIP file from:  
+   **[moodle.org/plugins/auth_oidc](https://moodle.org/plugins/auth_oidc)**
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+2. Go to **Site administration -> plugins -> Drag ZIP package**
+   (`https://your-moodle-site/admin/tool/installaddon/index.php`)
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+3. **Upload the ZIP** → Click **Install plugin from the ZIP file**
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+4. Follow prompts → **Plugin installed successfully**
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+> **<span style="color:red;">Note: Do not extract the ZIP — upload as-is</span>**
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+## Step 5: Configure OIDC in Moodle
+
+Go to: **Site administration → Plugins → Authentication → OpenID Connect**
+
+| Field                        | Value |
+|------------------------------|-------|
+| **IdP Type**                 | `Microsoft identity platform (v2.0)` |
+| **Application ID**           | *(Your Application (client) ID)* |
+| **Client authentication method** | `Secret` |
+| **Client Secret**            | *(Paste your secret here)* |
+| **Authorization Endpoint**   | `https://login.microsoftonline.com/<tenant-id>/oauth2/v2.0/authorize` |
+| **Token Endpoint**           | `https://login.microsoftonline.com/<tenant-id>/oauth2/v2.0/token` |
+| **Scope**                    | `openid profile email` |
+| **Redirect URI**             | `https://your-moodle-site/auth/oidc/` |
+
+> **<span style="color:red;">Warning: Replace `<tenant-id>` with your Directory (tenant) ID</span>**
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## Step 6: Enable Advanced Features
+
+Go to: **Site administration → Plugins → Authentication → OpenID Connect → Settings**
+
+| Feature               | Setting                     |
+|-----------------------|-----------------------------|
+| **Force redirect**    | `Yes`                       |
+| **Silent Login Mode** | `Yes`                       |
+| **Login Flow**        | `Authorization Code Flow`   |
+
+> **<span style="color:red;">Note: Silent Login works best when users are already signed into Microsoft</span>**
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+## Step 7: Enable Single Sign-Out
+
+Go to: **Site administration → Plugins → Authentication → OpenID Connect → Settings**
+
+| Field                        | Value |
+|------------------------------|-------|
+| **Single Sign Out**          | `Yes` |
+| **IdP Logout Endpoint**      | `https://login.microsoftonline.com/<tenant-id>/oauth2/v2.0/logout` |
+| **Front-channel Logout URL** | `https://your-moodle-site/auth/oidc/logout.php` |
+
+> **Azure AD → App → Authentication → Add Front-channel logout URL**  
+> **<span style="color:red;">Warning: Replace `<tenant-id>` with your Directory (tenant) ID</span>**
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+## Step 8: Auto-Sync User Profiles
+
+Go to: **Site administration → Plugins → Authentication → OpenID Connect → Settings**
+
+| Field       | Mapping       | Update Local         | Lock      |
+|-------------|---------------|----------------------|-----------|
+| **First name** | `given_name` | `On creation & login` | `Unlocked` |
+| **Last name**  | `family_name`| `On creation & login` | `Unlocked` |
+| **Email**      | `email`      | `On creation & login` | `Unlocked` |
+
+> **<span style="color:red;">Note: Profile fields are synced from Azure AD on every login</span>**
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## Step 9: Test the Flow
+
+1. Visit: [`https://your-moodle-site`](https://your-moodle-site)
+
+2. Click **"Login with Microsoft"**
+
+3. **Authenticate** → Enter credentials → Complete **MFA**
+
+4. **Success** → User auto-created in Moodle → Profile synced
+
+5. Click **Logout** → Signed out of **Moodle + Microsoft**
+
+> **<span style="color:red;">Warning: If login fails, check Client Secret, Redirect URI, and user assignment in Azure AD</span>**
