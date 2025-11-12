@@ -21,14 +21,12 @@
 
 > **<span style="color:red;">Note: Save the Application (client) ID and Directory (tenant) ID</span>**
 
-
-
 <p align="center">
-  <img src="(https://github.com/user-attachments/assets/840fba53-ebe3-4f95-bab3-68d2419e08a4)"
-       alt="Moodle OIDC Configuration"
+  <img src="https://github.com/user-attachments/assets/173ab667-82d2-420b-80c8-c2e2f30c02dd"
+       alt="Moodle OIDC Advanced Settings"
        width="800"
        style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-  <br><em>Moodle OpenID Connect plugin settings — enter your Azure AD <strong>Client ID</strong>, <strong>Secret</strong>, and <strong>v2.0 endpoints</strong></em>
+  <br><em>Advanced OIDC settings — enable <strong>Force redirect</strong>, <strong>Silent Login</strong>, and <strong>Authorization Code Flow</strong></em>
 </p>
 
 
@@ -46,27 +44,28 @@ ________________________________________________________________________________
    - `profile`
    - `email`
    - `User.Read`
-
+  
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/95a18b65-3cd5-4b54-aba6-d08b43818331"
+  <img src="https://github.com/user-attachments/assets/f4e1a974-0610-468f-8e8f-92775dfeb9a8"
        alt="Azure AD API Permissions"
        width="800"
        style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-  <br><em>Add <code>openid</code>, <code>profile</code>, <code>email</code>, and <code>User.Read</code> permissions</em>
+  <br><em>Configure <strong>Delegated permissions</strong> in Microsoft Graph: <code>openid</code>, <code>profile</code>, <code>email</code>, <code>User.Read</code></em>
 </p>
 
 
 4. Click **Grant admin consent for Default Directory** to approve these for your tenant.
 
+![2](https://github.com/user-attachments/assets/948e12dc-7977-4e69-9088-fee4871d6bd4)
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ebad01ea-bbbd-4228-8252-e6842cacf56a"
-       alt="Azure AD Client Secret"
+  <img src="https://github.com/user-attachments/assets/948e12dc-7977-4e69-9088-fee4871d6bd4"
+       alt="Azure AD Client Secret Creation"
        width="800"
        style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-  <br><em>Create a <strong>Client Secret</strong> — copy the <code>Value</code> immediately (it’s shown only once!)</em>
+  <br><em>Create a <strong>Client Secret</strong> — <strong>copy the Value immediately</strong> (it disappears after you leave the page)</em>
 </p>
 
 
@@ -84,19 +83,21 @@ ________________________________________________________________________________
    - **Description**: `Azure AD`
    - **Expires**: `24 months`
 
+![3](https://github.com/user-attachments/assets/48c2c7be-41a7-4c3f-8422-a7611a8b6ad9)
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b0a16ce8-7a03-4566-9aff-f35959e84367"
-       alt="Moodle Plugin Installer"
+  <img src="https://github.com/user-attachments/assets/48c2c7be-41a7-4c3f-8422-a7611a8b6ad9"
+       alt="Moodle Plugin Upload"
        width="800"
        style="border:2px solid #0078D4; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-  <br><em>Upload the <strong>OpenID Connect ZIP</strong> directly — do <strong>not extract</strong> it</em>
+  <br><em>Upload the <strong>OpenID Connect ZIP file</strong> directly — <strong>do not extract</strong> it first</em>
 </p>
 
 
 2. **Copy the `Value`** (e.g., `F9S8Q~XXXXXXXXXXXXXXXXX-WZsA~XXXXX`)  
 > **<span style="color:red;">Warning: This is shown only once. If lost, delete and recreate.</span>**
+
 
 
 <p align="center">
