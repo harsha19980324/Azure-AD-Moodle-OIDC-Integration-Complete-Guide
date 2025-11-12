@@ -230,9 +230,9 @@ Go to: **Site administration → Plugins → Authentication → OpenID Connect �
     <strong>Harsha Jayawardhana</strong>
   </p>
   <p style="margin: 10px 0;">
-    <a href="mailto:alex.rivera@example.com" style="color: #D83B01; text-decoration: none;">harshakunkuma98@gmail.com</a> • 
-    <a href="https://linkedin.com/in/alexrivera" target="_blank">LinkedIn</a> • 
-    <a href="https://github.com/alexrivera" target="_blank">GitHub</a>
+    <a href="harshakunkuma98@gmail.com" style="color: #D83B01; text-decoration: none;">harshakunkuma98@gmail.com</a> • 
+    <a href="https://www.linkedin.com/in/harsha-jayawardhana-5bbb85216/" target="_blank">LinkedIn</a> • 
+    <a href="https://github.com/harsha19980324" target="_blank">GitHub</a>
   </p>
   <p style="margin: 5px 0; font-size: 14px; color: #555;">
     <em>Love open-source? Let’s collaborate!</em>
